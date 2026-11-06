@@ -1,0 +1,30 @@
+THIỆP CƯỚI ONLINE — TÔNG ĐỎ ĐÔ VINTAGE
+=======================================
+
+CẤU TRÚC
+  index.html      khung trang (không cần sửa)
+  style.css       giao diện
+  app.js          hiệu ứng + logic (lịch âm tự tính, đếm ngược, RSVP, mừng cưới…)
+  config.js       >>> THÔNG TIN TỪNG ĐƠN — chỉ sửa file này <<<
+  assets/anh/     ảnh cưới (thay bằng ảnh thật, giữ tên file hoặc sửa đường dẫn trong config.js)
+  assets/qr-*.png mã QR mừng cưới (chụp/tải từ app ngân hàng của cô dâu, chú rể)
+  assets/fonts/   font chữ tiếng Việt (tự host, không cần mạng)
+  apps-script/    script ghi xác nhận tham dự vào Google Sheet
+
+LÀM MỘT ĐƠN MỚI
+  1. Nhân bản cả thư mục, đặt tên theo cặp đôi (vd: thuha-minhanh).
+  2. Sửa config.js: tên, bố mẹ hai họ, ngày giờ, địa chỉ, số tài khoản…
+     - side: "nha-gai" (Lễ Vu Quy) hoặc "nha-trai" (Lễ Thành Hôn) — cùng một mẫu dùng cho cả 2 thiệp.
+     - Âm lịch tự tính theo giờ Việt Nam; muốn ghi tay thì thêm  lunar: "..."  vào sự kiện.
+  3. Thay ảnh trong assets/anh/ và mã QR.
+  4. (Tuỳ chọn) Cài Google Sheet nhận xác nhận: làm theo hướng dẫn ở đầu apps-script/Code.gs,
+     rồi dán link vào  rsvpEndpoint  trong config.js.
+  5. Đẩy thư mục lên GitHub Pages → link dạng  phuongbunnie.id.vn/thuha-minhanh/
+
+LINK CÓ TÊN KHÁCH
+  Thêm ?khach=Tên vào cuối link, ví dụ:
+  https://phuongbunnie.id.vn/thuha-minhanh/?khach=Anh%20Tuấn
+  → phong bì ghi "Kính gửi Anh Tuấn" và form xác nhận điền sẵn tên.
+
+XEM THỬ TRÊN MÁY
+  Mở terminal trong thư mục, chạy:  python3 -m http.server  rồi vào http://localhost:8000
